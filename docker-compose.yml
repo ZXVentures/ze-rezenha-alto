@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  ghost:
+    image: ghost:3.30
+    restart: always
+    ports:
+      - 80:2368
+    environment:
+      url: http://localhost
+      NODE_ENV: "development"
+    volumes:
+      - .:/var/lib/ghost/content/themes/ze-rezenha-alto

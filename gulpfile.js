@@ -29,6 +29,13 @@ function handleError(done) {
     };
 };
 
+function locale(done) {
+    pump([
+        src(['locales/*.json']),
+        livereload()
+    ], handleError(done));
+}
+
 function hbs(done) {
     pump([
         src(['*.hbs', 'partials/**/*.hbs', 'members/**/*.hbs']),
@@ -93,7 +100,8 @@ function zipper(done) {
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', 'members/**/*.hbs'], hbs);
 const cssWatcher = () => watch('assets/css/**/*.css', css);
 const jsWatcher = () => watch('assets/js/**/*.js', js);
-const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
+const localeWatcher = () => watch('locales/*.json', locale);
+const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher, localeWatcher);
 const build = series(css, js);
 
 exports.build = build;

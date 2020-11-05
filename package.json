@@ -1,6 +1,6 @@
 {
-    "name": "alto",
-    "description": "A Ghost theme",
+    "name": "ze-rezenha-alto",
+    "description": "Custom Alto theme for https://rezenha.ze.delivery",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=3.0.0",
@@ -8,9 +8,9 @@
     },
     "license": "MIT",
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Zé Delivery",
+        "email": "engineering@ze.delivery",
+        "url": "https://ze.delivery"
     },
     "keywords": [
         "ghost",
@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "dev": "gulp",
+        "dev": "docker-compose up -d && gulp",
         "test": "gscan .",
         "lint": "gulp lint",
         "zip": "gulp zip"

@@ -14,12 +14,12 @@
                         {{#unless number_date}}
                             {{date published_at timeago="true"}}
                         {{else}}
-                            {{date published_at}}
+                            {{date published_at format="DD \d\e MMMM \d\e YYYY"}}
                         {{/unless}}
                     </time>
                 </span>
                 <span class="post-meta-item post-meta-length">
-                    {{reading_time}}
+                    {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
                 </span>
                 {{#if tags}}
                     <span class="post-meta-item post-meta-tags">

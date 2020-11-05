@@ -1,25 +1,10 @@
-# Alto
+# ReZÉnha's Alto
 
-A clean, minimalist theme featuring a light and dark mode. Launch your online publications with flair. Completely free and fully responsive, released under the MIT license.
+A clean, minimalist theme featuring a light and dark mode with Zé Delivery style.
 
-**Demo: https://alto.ghost.io**
+**Demo: https://rezenha.ze.delivery**
 
 &nbsp;
-
-# Instructions
-
-1. [Download this theme](https://github.com/TryGhost/Alto/archive/master.zip)
-2. Log into Ghost, and go to the `Design` settings area to upload the zip file
-
-# White Logo
-
-If your logo image isn't recognizable in dark mode, you can set a white version of the logo in `Code injection > Site Header` field.
-
-```html
-<script>
-    var gh_white_logo = 'https://example.com/content/images/white-logo.png';
-</script>
-```
 
 # Development
 
@@ -31,9 +16,14 @@ yarn
 
 # Run build & watch for changes
 $ yarn dev
+
+# Open your browser at http://localhost/ghost and create an account
+
+# Activate the ze-resenha-alto theme at the Design section
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+To update the locale files you need to update the locale at Ghost Admin -> General and will probably need to restart the docker container.
 
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 

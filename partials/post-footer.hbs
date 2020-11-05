@@ -1,8 +1,8 @@
 <footer class="post-footer">
     <div class="post-action">
-        <a class="post-link primary" href="{{url}}">Read Now</a>
+        <a class="post-link primary" href="{{url}}">{{t "read now"}}</a>
         <a class="post-link secondary" href="https://getpocket.com/edit?url={{url absolute="true"}}"
-            target="_blank">Read Later</a>
+            target="_blank">{{t "read later"}}</a>
     </div>
     <div class="post-author">
         {{#foreach authors}}
@@ -13,7 +13,7 @@
             {{/if}}
         {{/foreach}}
         <div class="post-author-name hidden-xs hidden-sm">
-            <span class="post-author-by">By: </span>
+            <span class="post-author-by">{{t "written by"}} </span>
             {{#foreach authors}}<a class="post-author-name-link" href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
     </div>
